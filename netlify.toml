@@ -1,0 +1,14 @@
+[[redirects]]
+  from = "/object/*"
+  to = "/object.html"
+  status = 200
+
+[[headers]]
+  for = "/media/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/models/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

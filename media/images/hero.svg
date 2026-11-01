@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" role="img" aria-label="Illustration of a Kazakh yurt and a dombra">
+<ellipse cx="300" cy="396" rx="250" ry="22" fill="#d9c7a4" opacity=".7"/>
+<g>
+  <path d="M110 240 h380 v128 h-380z" fill="#fbf7ee" stroke="#3b2a1e" stroke-width="3"/>
+  <path d="M110 240 Q300 70 490 240z" fill="#f6efe0" stroke="#3b2a1e" stroke-width="3"/>
+  <path d="M300 92 L110 240 M300 92 L205 240 M300 92 L300 240 M300 92 L395 240 M300 92 L490 240" stroke="#b8924a" stroke-width="1.6" fill="none" opacity=".8"/>
+  <circle cx="300" cy="106" r="22" fill="#fbf7ee" stroke="#3b2a1e" stroke-width="3"/>
+  <path d="M300 84 v44 M278 106 h44" stroke="#3b2a1e" stroke-width="2"/>
+  <path d="M110 276 h380 M110 312 h380" stroke="#2f8f8b" stroke-width="6" opacity=".85"/>
+  <path d="M110 276 h380" stroke="#b8924a" stroke-width="2" stroke-dasharray="10 8"/>
+  <path d="M268 368 v-86 a32 32 0 0 1 64 0 v86z" fill="#2f8f8b" stroke="#3b2a1e" stroke-width="3"/>
+  <path d="M276 360 v-78 a24 24 0 0 1 48 0 v78z" fill="none" stroke="#fbf7ee" stroke-width="2" opacity=".8"/>
+</g>
+<g transform="translate(520 120) rotate(14)">
+  <path d="M0 0 h14 v190 h-14z" fill="#6b5442" stroke="#3b2a1e" stroke-width="2.5"/>
+  <path d="M7 190 C-50 205 -52 292 7 300 C66 292 64 205 7 190z" fill="#b8924a" stroke="#3b2a1e" stroke-width="3"/>
+  <circle cx="7" cy="248" r="13" fill="#3b2a1e"/>
+  <path d="M3 8 V248 M11 8 V248" stroke="#fbf7ee" stroke-width="1.4"/>
+  <rect x="-4" y="-18" width="22" height="24" rx="5" fill="#3b2a1e"/>
+</g>
+</svg>
