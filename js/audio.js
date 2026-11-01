@@ -29,7 +29,8 @@ export function createNarration(obj) {
   const title = h('h2.sec-title', { id: 'narr-title' }, 'Listen');
   const note = h('p.narr-note');
   const controls = h('div.narr-controls');
-  root.append(title, controls, note, h('h3.sec-sub', null, 'Transcript'), transcript);
+  const trTitle = h('h3.sec-sub', null, 'Transcript');
+  root.append(title, controls, note, trTitle, transcript);
 
   const mark = (i) => {
     spans.forEach((s, k) => s.classList.toggle('on', k === i));
@@ -57,7 +58,8 @@ export function createNarration(obj) {
     });
     bar.addEventListener('input', () => { if (a.duration) a.currentTime = (Number(bar.value) / 1000) * a.duration; });
     controls.replaceChildren(btn, bar, time);
-    note.textContent = 'English audio narration.';
+    note.textContent = 'Recorded audio narration.';
+    trTitle.textContent = 'Text';
   }
 
   function mountSpeech() {

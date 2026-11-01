@@ -87,6 +87,7 @@ export function mount3D(root, obj) {
         ' on ', h('a', { href: sf.url, target: '_blank', rel: 'noopener noreferrer' }, 'Sketchfab'),
         '. License: ', sf.license || 'not stated on the model page', '.',
       );
+      if (sf.about) credit.append(' ', sf.about);
       if (sf.note) credit.append(h('span.m3d-credit-note', null, ' ', sf.note));
     } else if (mode === 'glb' && m.glb) {
       credit.append(m.glb.note || 'Simplified model generated for this project.');
