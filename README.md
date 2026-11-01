@@ -74,6 +74,14 @@ python3 make_models2.py      # dombra, kobyz, yurt, saukele
 python3 make_models3.py      # the 26 chapters added in the two-part edition
 ```
 
+## Printable book (PDF)
+`print/kazakh-heritage-book-A4.pdf` is an A4 version for printing (41 pages). Every page has a QR code: chapter pages open the 3D page `https://kazakhheritage.netlify.app/object/<slug>`, the other pages open the online book.
+To rebuild it after changing texts, or for another site address:
+
+```bash
+sh tools/make_print.sh https://your-site.example   # needs Python 3 (Pillow, numpy, scipy), Node.js 18+, Chrome/Chromium
+```
+
 ## Project layout
 ```
 index.html  object.html  css/style.css
