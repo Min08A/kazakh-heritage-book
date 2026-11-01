@@ -15,7 +15,27 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
+import re
+
 import art
+import art2
+
+BUILDERS = dict(art.BUILDERS)
+BUILDERS.update(art2.BUILDERS2)
+
+
+def book_order():
+    """Chapter slugs, titles and native names in reading order, read from js/data.js."""
+    src = open(os.path.join(os.path.dirname(__file__), '..', 'js', 'data.js'), encoding='utf-8').read()
+    src = src[src.index('const list = ['):]
+    out = []
+    for m in re.finditer(r"slug: '([^']+)',\s*part: (\d),\s*title: '([^']+)',\s*native: '([^']+)'", src):
+        out.append(dict(slug=m.group(1), part=int(m.group(2)), title=m.group(3), native=m.group(4)))
+    return out
+
+
+ORDER = book_order()
+INFO = {o['slug']: dict(o, n=i + 1) for i, o in enumerate(ORDER)}
 
 FW, FH, FPS = 1280, 720, 24
 DUR = 40.0
@@ -105,7 +125,7 @@ def panel_layers(sc, num):
 
     # header
     im, d = new()
-    spaced(d, (PADX, 104), f'CHAPTER {num:02d}', ImageFont.truetype(POP, 20), art.GOLD, 4)
+    spaced(d, (PADX, 104), f'PART {INFO[sc.slug]["part"]} · CHAPTER {num:02d}', ImageFont.truetype(POP, 20), art.GOLD, 4)
     fs = 66
     while True:
         f = lora(fs, 700)
@@ -290,7 +310,13 @@ MUSIC = {
 
 
 def make_music(slug, path):
-    m = MUSIC[slug]
+    if slug in MUSIC:
+        m = MUSIC[slug]
+    else:
+        h = sum(map(ord, slug))
+        roots = [110.0, 123.47, 130.81, 146.83, 164.81, 174.61, 196.0]
+        scales = [[0, 2, 4, 7, 9], [0, 3, 5, 7, 10], [0, 2, 3, 7, 8]]
+        m = dict(root=roots[h % 7], scale=scales[h % 3], bpm=70 + h % 60, kind='bow' if slug in ('zhyr', 'kui') and False else 'pluck')
     rng = np.random.RandomState(sum(map(ord, slug)))
     total = int(SR * DUR)
     mix = np.zeros(total + SR * 3)
@@ -358,21 +384,24 @@ def make_cover(sc, prepped, path):
 
 # ------------------------------------------------------------------ main
 def render(slug, webm=True, still_only=False):
-    sc = art.BUILDERS[slug]()
-    num = list(art.BUILDERS).index(slug) + 1
+    sc = BUILDERS[slug]()
+    info = INFO[slug]
+    num = info['n']
+    sc.title, sc.native = info['title'], info['native']
     prepped = prep_layers(sc)
     os.makedirs(OUT_V, exist_ok=True)
     os.makedirs(OUT_I, exist_ok=True)
-    make_cover(sc, prepped, os.path.join(OUT_I, f'{slug}.jpg'))
-    if still_only:
-        return
     bg = make_bg()
     header, caps, outro = panel_layers(sc, num)
+    poster = frame_at(bg, prepped, header, caps, outro, 30.0)
+    Image.fromarray((poster * 255).clip(0, 255).astype(np.uint8)).resize((960, 540), Image.LANCZOS).save(os.path.join(OUT_I, f'{slug}.jpg'), quality=86)
+    if still_only:
+        return
     wav = os.path.join(OUT_V, f'_{slug}.wav')
     make_music(slug, wav)
     mp4 = os.path.join(OUT_V, f'{slug}.mp4')
     cmd = ['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'bgr24', '-s', f'{FW}x{FH}', '-r', str(FPS), '-i', '-',
-           '-i', wav, '-c:v', 'libx264', '-preset', 'medium', '-crf', '25', '-pix_fmt', 'yuv420p', '-profile:v', 'high',
+           '-i', wav, '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '25', '-pix_fmt', 'yuv420p', '-profile:v', 'high',
            '-movflags', '+faststart', '-c:a', 'aac', '-b:a', '112k', '-shortest', mp4]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     n = int(DUR * FPS)
@@ -393,5 +422,5 @@ def render(slug, webm=True, still_only=False):
 if __name__ == '__main__':
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     flags = [a for a in sys.argv[1:] if a.startswith('--')]
-    for s in (args or list(art.BUILDERS)):
+    for s in (args or [o['slug'] for o in ORDER]):
         render(s, webm='--no-webm' not in flags, still_only='--still-only' in flags)

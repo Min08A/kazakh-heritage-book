@@ -1,4 +1,4 @@
-import { objects, bySlug, neighbours, coverOf } from './data.js';
+import { objects, bySlug, neighbours, partOf } from './data.js';
 import { h, icon } from './dom.js';
 import { asset } from './config.js';
 import { mount3D } from './model3d.js';
@@ -50,7 +50,7 @@ function render(o) {
   app.replaceChildren(
     header(),
     h('main.obj-main', null,
-      h('p.kicker', null, `Chapter ${o.n} of ${objects.length}`),
+      h('p.kicker', null, `${partOf(o).label} · Chapter ${o.n} of ${objects.length}`),
       h('h1.obj-title', null, o.title, h('span.native', { lang: 'kk' }, o.native)),
       h('p.lead', null, o.subtitle),
       h('section.obj-section', { 'aria-label': '3D model' }, viewer),

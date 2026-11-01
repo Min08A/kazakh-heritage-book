@@ -1,6 +1,11 @@
 # Kazakh Heritage — an interactive book
 
-A page-turning web book about eight Kazakh cultural objects: **Dombra, Yurt, Kobyz, Saukele, Shapan, Beshbarmak, Besik, Torsyk**.
+A page-turning web book of **34 Kazakh words** in two parts:
+
+* **Part 1. Textbook Vocabulary** — Khan Shatyr, Kiiz Ui (yurt), Kyz Zhibek, Aisha Bibi, Karakhan, Airan.
+* **Part 2. Proposed Vocabulary** — Aitys, Asyk, At Arba, Baige, Baursak, Besik, Dombyra, Zhailau, Kazakh Kuresi, Keruen, Kosh, Kymyz, Kui, Qorzhyn, Qudyq, Qurt, Qystau, Saba, Shanyraq, Sheber, Torsyq, Usta, Zerger, Zhyr, Kobyz, Saukele, Shapan, Beshbarmak.
+
+The book layout (contents pages, part openers, chapters, credits) is generated from `js/data.js`, so chapters can be added or reordered there.
 
 * Every chapter is a two-page spread: a **video** (with English captions) + a **QR code** on the left, the story and facts on the right.
 * The QR code stays **locked until the video really ends** (HTML5 `ended` event). It opens `/object/<slug>`, a mobile page with an interactive **3D model**, **audio narration** + transcript, attribution and previous/next navigation.
@@ -46,16 +51,15 @@ Not recommended: it cannot rewrite `/object/<slug>`.
 ## Content
 
 * All texts, model links, credits and licenses: **`js/data.js`**.
-* Videos: `media/videos/<slug>.mp4` (H.264/AAC) + `.webm` (VP9/Opus); posters `media/images/<slug>.jpg`.
+* Videos: `media/videos/<slug>.mp4` (H.264/AAC; an optional `.webm` is used if present); posters `media/images/<slug>.jpg`.
   The videos are **animated illustrations with captions and synthesized music** created for this project — there is no spoken voice and no live-action footage.
-* Narration: if `media/audio/<slug>.mp3` exists it is used. Otherwise the object page reads the transcript with the **browser's built-in English voice** (labelled as such). Drop your own recordings into `media/audio/` to replace it.
+* Narration: `media/audio/<slug>.mp3` — recorded narration for the 29 words that have a recording (all except Karakhan, Kobyz, Saukele, Shapan, Beshbarmak). Where there is no file, the object page reads the transcript with the **browser's built-in English voice** (labelled as such). Drop a new recording into `media/audio/` to replace or add one.
 
 ### 3D models
-| Object | Primary | Fallback / alternative |
-|---|---|---|
-| Dombra, Kobyz | Sketchfab (Q3D_Library, CC BY 4.0) | simplified model in `models/` |
-| Yurt, Saukele, Besik | Sketchfab (license *not stated* on the model pages — confirm with the creators before a public launch) | simplified model in `models/` |
-| Shapan, Beshbarmak, Torsyk | simplified model in `models/` (made for this project) | — |
+Each chapter's model is listed in `js/data.js` and credited on the Credits pages of the book and under each 3D viewer.
+* **Sketchfab, CC BY 4.0:** Kyz Zhibek (girl's takiya), Asyk, Baige (qamshy), Baursak, Dombyra, Usta (anvil), Zhyr (Umbetai Zhyrau monument), Kobyz, Shapan.
+* **Sketchfab, license not stated on the model page** (confirm with the creators before a public launch): Khan Shatyr, Kiiz Ui, Aisha Bibi, Karakhan, Aitys, Kazakh Kuresi, Kui, Qystau, Besik, Saukele.
+* **Simplified models made for this project** (`models/*.glb`): Airan, At Arba, Zhailau, Keruen, Kosh, Kymyz, Qorzhyn, Qudyq, Qurt, Saba, Shanyraq, Sheber, Zerger, Torsyq, Beshbarmak. Every chapter also has a simplified model as an offline fallback.
 
 The Sketchfab viewer is loaded with AR/VR buttons switched off. If a Sketchfab model fails (or you press **Use simplified model**) the page shows the local `.glb` in a small built-in WebGL viewer (`js/glbviewer.js`, no external libraries). The credit line under the viewer always names the creator and license.
 
@@ -64,9 +68,10 @@ Needs Python 3, `numpy`, `Pillow`, `opencv-python`, `ffmpeg`, and the Lora/Poppi
 
 ```bash
 cd tools
-python3 render.py            # all videos + posters (about 2 min per video)
+python3 render.py [slug ...] # videos + posters (about 1 min per video); add --no-webm to skip WebM
 python3 make_models.py       # shapan, beshbarmak, besik, torsyk
 python3 make_models2.py      # dombra, kobyz, yurt, saukele
+python3 make_models3.py      # the 26 chapters added in the two-part edition
 ```
 
 ## Project layout
