@@ -1,5 +1,5 @@
 import { objects, parts, chaptersOfPart, partOf } from './data.js';
-import { h, icon } from './dom.js';
+import { h, icon, topicNodes } from './dom.js';
 import { asset } from './config.js';
 import { createVideoPlayer } from './video.js';
 import { createQrPanel } from './qrpanel.js';
@@ -110,7 +110,7 @@ export function createBook(root) {
     return h('section.page.page-cover', { 'data-page': 0, 'aria-label': 'Book cover' },
       h('div.cover-frame', null,
         h('p.cover-kicker', null, 'An interactive book'),
-        h('h1.cover-title', null, 'Kazakh', h('br'), 'Heritage'),
+        h('h1.cover-title.long', null, 'KAZAKH ETHNOGRAPHIC TERMS:', h('br'), 'AN AI-BASED QR DICTIONARY'),
         h('p.cover-native', { lang: 'kk' }, 'Қазақ мұрасы'),
         h('div.cover-art', null, h('img', { src: asset('media/images/hero.svg'), alt: 'Illustration of a yurt and a dombyra', width: 640, height: 460 })),
         h('p.cover-sub', null, `${objects.length} words of the steppe — watch, scan, explore in 3D`),
@@ -203,7 +203,7 @@ export function createBook(root) {
     const grid = h('ul.part-grid', { class: items.length > 12 ? 'part-grid dense' : 'part-grid' }, items.map((o) =>
       h('li', null, h('button.part-chip', { type: 'button', 'data-slug': o.slug, onclick: () => goToChapter(objects.indexOf(o)) },
         h('span.chip-n', null, String(o.n)),
-        h('span.chip-main', null, h('strong', null, o.title), h('span', { lang: 'kk' }, o.native)),
+        h('span.chip-main', null, h('strong', null, o.title), h('span', { lang: 'kk' }, `${o.native} · ${o.transcription}`)),
       ))));
     const el = pageShell(idx, 'page-part-list',
       h('p.kicker', null, `${p.label} · In this part`),
@@ -232,7 +232,7 @@ export function createBook(root) {
     return pageShell(idx, 'page-video',
       h('header.ch-head', null,
         h('p.kicker', null, `${partOf(o).label} · Chapter ${o.n} of ${objects.length}`),
-        h('h2.page-title', null, o.title, h('span.native', { lang: 'kk' }, o.native)),
+        h('h2.page-title', null, o.title, h('span.native', null, h('span', { lang: 'kk' }, o.native), h('span.transcr', null, ' · ', o.transcription))),
       ),
       player.el,
       h('p.vcaption', null, h('strong', null, o.subtitle + '. '), o.summary),
@@ -247,11 +247,13 @@ export function createBook(root) {
     const next = c < objects.length - 1 ? objects[c + 1] : null;
     return pageShell(idx, 'page-text',
       h('div.orn', { 'aria-hidden': true }, '❖'),
-      h('p.kicker', null, `${o.title} · ${o.native}`),
+      h('p.kicker', null, `${o.title} · ${o.native} · ${o.transcription}`),
       h('h3.page-sub', null, o.subtitle),
       h('p.body', null, o.description),
       h('h4.facts-title', null, 'Good to know'),
       h('ul.facts', null, o.facts.map((f) => h('li', null, f))),
+      h('h4.facts-title', null, 'The word in a sentence'),
+      h('p.topic', null, topicNodes(o.topic)),
       h('div.ch-nav', null,
         prev ? h('button.link', { type: 'button', onclick: () => goToChapter(c - 1) }, icon('left', 14), prev.title) : h('span'),
         h('button.link', { type: 'button', onclick: () => goToPage(P.contents) }, icon('list', 14), 'Contents'),

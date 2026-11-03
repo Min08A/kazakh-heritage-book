@@ -30,6 +30,9 @@ const list = [
     part: 1,
     title: 'Khan Shatyr',
     native: 'Хан Шатыр',
+    transcription: 'han shatır',
+    topic:
+      'On a freezing winter day, families in Astana stroll through [[Khan Shatyr]] in light clothes, because the transparent tent keeps the air inside warm.',
     subtitle: 'The royal tent of Astana',
     summary: 'A giant transparent tent that shelters a whole town of shops, parks and a beach.',
     description:
@@ -59,6 +62,9 @@ const list = [
     part: 1,
     title: 'Kiiz Ui',
     native: 'Киіз үй',
+    transcription: 'kiíz üy',
+    topic:
+      'As a guest, you enter the [[kiiz ui]] and sit at a round low table. Colourful hand-crafted rugs and blankets cover the floor and walls, and the felt protects the family from the weather.',
     subtitle: 'The portable home of the nomads',
     summary: 'The felt-covered yurt, built to travel with the seasons.',
     description:
@@ -88,6 +94,9 @@ const list = [
     part: 1,
     title: 'Kyz Zhibek',
     native: 'Қыз Жібек',
+    transcription: 'qız zhíbek',
+    topic:
+      'At a festival, an akyn sings the story of [[Kyz Zhibek]] to the dombra, and the audience listens to the tale of love and loyalty.',
     subtitle: 'The silk maiden of the great love epic',
     summary: 'The heroine of a famous Kazakh love story, told in verse, on stage and on screen.',
     description:
@@ -117,6 +126,9 @@ const list = [
     part: 1,
     title: 'Aisha Bibi',
     native: 'Айша бибі',
+    transcription: 'aysha bíbí',
+    topic:
+      'Young couples visiting Taraz stop at [[Aisha Bibi]] to admire the carved tiles and hear the legend of faithful love.',
     subtitle: 'A monument to faithful love',
     summary: 'A medieval mausoleum near Taraz, covered with carved terracotta patterns.',
     description:
@@ -146,6 +158,9 @@ const list = [
     part: 1,
     title: 'Karakhan',
     native: 'Қарахан',
+    transcription: 'qarahan',
+    topic:
+      'In Taraz, guides tell how the ruler [[Karakhan]] built a mausoleum in memory of his beloved Aisha.',
     subtitle: 'The mausoleum of the holy ruler of Taraz',
     summary: 'The domed tomb of a Karakhanid ruler, honoured in the heart of Taraz.',
     description:
@@ -173,23 +188,26 @@ const list = [
   {
     slug: 'airan',
     part: 1,
-    title: 'Airan',
+    title: 'Ayran',
     native: 'Айран',
+    transcription: 'ayran',
+    topic:
+      'On a hot summer day, a guest in the yurt is offered a bowl of cold [[ayran]] mixed with water.',
     subtitle: 'The cool sour milk of summer',
     summary: 'A refreshing fermented milk drink served in every Kazakh home.',
     description:
-      'Airan is a traditional Kazakh drink made from fermented cow’s, sheep’s or goat’s milk. The milk is boiled, cooled until it is warm, and then a little old airan, called the starter, is stirred in. After some hours it thickens and becomes pleasantly sour. Airan is drunk on its own, mixed with cold water on hot days, or poured over food. It quenches thirst, keeps well and is good for digestion, so it was always at hand in the yurt. Airan is also the beginning of other dairy foods: when it is strained and dried, it becomes qurt, the hard cheese balls that nomads carried on long journeys.',
+      'Ayran is a traditional Kazakh drink made from fermented cow’s, sheep’s or goat’s milk. The milk is boiled, cooled until it is warm, and then a little old ayran, called the starter, is stirred in. After some hours it thickens and becomes pleasantly sour. Ayran is drunk on its own, mixed with cold water on hot days, or poured over food. It quenches thirst, keeps well and is good for digestion, so it was always at hand in the yurt. Ayran is also the beginning of other dairy foods: when it is strained and dried, it becomes qurt, the hard cheese balls that nomads carried on long journeys.',
     facts: [
-      'A spoonful of the previous day’s airan is used as a starter for the next batch.',
-      'Airan mixed with cold water is a favourite summer drink.',
-      'Strained and dried airan is used to make qurt.',
+      'A spoonful of the previous day’s ayran is used as a starter for the next batch.',
+      'Ayran mixed with cold water is a favourite summer drink.',
+      'Strained and dried ayran is used to make qurt.',
     ],
     transcript:
-      'Airan is a cool, sour drink made from fermented milk. A little old airan is stirred into warm milk, and a few hours later a refreshing drink is ready.',
+      'Ayran is a cool, sour drink made from fermented milk. A little old ayran is stirred into warm milk, and a few hours later a refreshing drink is ready.',
     model: {
       sketchfab: null,
       searchUrl: `${SF}/search?type=models&q=ayran`,
-      glb: glb('airan', 'Simplified 3D model of a wooden bowl of airan with a jug'),
+      glb: glb('airan', 'Simplified 3D model of a wooden bowl of ayran with a jug'),
     },
   },
 
@@ -199,6 +217,9 @@ const list = [
     part: 2,
     title: 'Aitys',
     native: 'Айтыс',
+    transcription: 'aytıs',
+    topic:
+      'At a holiday, two akyns face each other and answer each other’s verses with quick wit in an [[aitys]] while the crowd cheers.',
     subtitle: 'A duel of poets',
     summary: 'Two akyns improvise verses to the dombra and answer each other in rhyme.',
     description:
@@ -229,6 +250,9 @@ const list = [
     part: 2,
     title: 'Asyk',
     native: 'Асық',
+    transcription: 'asıq',
+    topic:
+      'Children sit in a circle on the ground and throw the [[asyk]] bones, and every throw decides who wins the game.',
     subtitle: 'The knucklebone game',
     summary: 'Small sheep knucklebones used in the favourite game of Kazakh children.',
     description:
@@ -257,6 +281,9 @@ const list = [
     part: 2,
     title: 'At Arba',
     native: 'Ат арба',
+    transcription: 'at arba',
+    topic:
+      'Before cars and roads, a family loaded its belongings onto an [[at arba]], a cart pulled by a horse.',
     subtitle: 'The horse-drawn cart',
     summary: 'A wooden cart with tall wheels, pulled by a horse.',
     description:
@@ -279,6 +306,9 @@ const list = [
     part: 2,
     title: 'Baige',
     native: 'Бәйге',
+    transcription: 'bäyge',
+    topic:
+      'At a wedding or a holiday, men ride out on their horses for the [[baige]], and the fastest, best-trained horse brings honour to its owner.',
     subtitle: 'The long-distance horse race',
     summary: 'A thrilling horse race across the open steppe, held at every great celebration.',
     description:
@@ -308,6 +338,9 @@ const list = [
     part: 2,
     title: 'Baursak',
     native: 'Бауырсақ',
+    transcription: 'bauırsaq',
+    topic:
+      'The meal is accompanied by [[baursak]], small round pieces of fried dough, served hot with tea.',
     subtitle: 'Golden bread of the dastarkhan',
     summary: 'Small pieces of dough fried until golden and puffy.',
     description:
@@ -336,6 +369,9 @@ const list = [
     part: 2,
     title: 'Besik',
     native: 'Бесік',
+    transcription: 'besík',
+    topic:
+      'A newborn baby sleeps in a wooden [[besik]], and relatives gather for a small celebration when the baby is first laid in it.',
     subtitle: 'The cradle that welcomes a child',
     summary: 'The carved wooden cradle at the heart of family tradition.',
     description:
@@ -366,6 +402,9 @@ const list = [
     part: 2,
     title: 'Dombyra',
     native: 'Домбыра',
+    transcription: 'dombıra',
+    topic:
+      'At the end of the meal you may sit and have tea while the musicians tune up the [[dombra]], a two-stringed instrument, and sing songs about love and war.',
     subtitle: 'The two-string voice of the steppe',
     summary: 'A long-necked, two-string instrument at the heart of Kazakh music.',
     description:
@@ -394,6 +433,9 @@ const list = [
     part: 2,
     title: 'Zhailau',
     native: 'Жайлау',
+    transcription: 'zhaylau',
+    topic:
+      'In summer the herders move their yurts to the [[zhailau]], the cool mountain pasture, where the animals feed on fresh grass.',
     subtitle: 'The green summer pasture',
     summary: 'High summer meadows where families lived with their herds.',
     description:
@@ -416,6 +458,9 @@ const list = [
     part: 2,
     title: 'Kazakh Kuresi',
     native: 'Қазақ күресі',
+    transcription: 'qazaq küresí',
+    topic:
+      'At a holiday, wrestlers meet in [[Kazakh kuresi]] inside a ring of spectators and try to throw each other to the ground.',
     subtitle: 'The wrestling of the steppe',
     summary: 'Traditional belt wrestling, the sport of strong and honourable men.',
     description:
@@ -446,6 +491,9 @@ const list = [
     part: 2,
     title: 'Keruen',
     native: 'Керуен',
+    transcription: 'keruen',
+    topic:
+      'A long [[keruen]] of camels crossed the steppe, carrying goods between distant towns.',
     subtitle: 'The camel caravan of the Silk Road',
     summary: 'A long line of loaded camels crossing the steppe and the desert.',
     description:
@@ -468,6 +516,9 @@ const list = [
     part: 2,
     title: 'Kosh',
     native: 'Көш',
+    transcription: 'kösh',
+    topic:
+      'When autumn came, the whole village joined the [[kosh]], loading the yurts and moving to the winter pastures.',
     subtitle: 'The great seasonal move',
     summary: 'The migration of a whole aul, with yurts packed on camels.',
     description:
@@ -490,6 +541,9 @@ const list = [
     part: 2,
     title: 'Kymyz',
     native: 'Қымыз',
+    transcription: 'qımız',
+    topic:
+      'Guests in the yurt are offered a bowl of [[kymyz]], the sour mare’s milk drink, as a sign of hospitality.',
     subtitle: 'The fermented mare’s milk',
     summary: 'The famous drink of the steppe, served from a leather saba.',
     description:
@@ -512,6 +566,9 @@ const list = [
     part: 2,
     title: 'Kui',
     native: 'Күй',
+    transcription: 'küy',
+    topic:
+      'Around the fire the musician plays a [[kui]] on the dombra, a melody that tells a story without any words.',
     subtitle: 'A story told without words',
     summary: 'An instrumental piece that tells a story through music alone.',
     description:
@@ -541,6 +598,9 @@ const list = [
     part: 2,
     title: 'Qorzhyn',
     native: 'Қоржын',
+    transcription: 'qorzhın',
+    topic:
+      'Before the journey, the rider hangs a pair of [[qorzhyn]] over the saddle, packed with bread and clothes.',
     subtitle: 'The double saddlebag',
     summary: 'A woven bag with two pockets, thrown over a horse or a camel.',
     description:
@@ -563,6 +623,9 @@ const list = [
     part: 2,
     title: 'Qudyq',
     native: 'Құдық',
+    transcription: 'quduq',
+    topic:
+      'After days of travel, the caravan stops at a [[qudyq]], a well, to give water to the animals.',
     subtitle: 'The well that gives life',
     summary: 'A well dug deep into the steppe to water people and herds.',
     description:
@@ -585,10 +648,13 @@ const list = [
     part: 2,
     title: 'Qurt',
     native: 'Құрт',
+    transcription: 'qurt',
+    topic:
+      'Before a long journey, the nomads put [[qurt]], dried salty cheese balls, into their bags.',
     subtitle: 'The dried cheese of the road',
     summary: 'Hard, salty balls of dried curd that keep for months.',
     description:
-      'Qurt is a dried dairy food. Sour milk or airan is boiled and strained through a cloth until a thick curd is left. The curd is salted, shaped by hand into small balls or rolls, and laid out in the sun and wind to dry until it is hard as stone. Qurt keeps for many months without spoiling, so nomads always had it on long journeys and through the winter. It is eaten as a snack, sucked slowly, or soaked and crushed into soups and drinks. Its taste is salty and sour. Today qurt is sold in every market of Kazakhstan, in white, smoked and flavoured varieties.',
+      'Qurt is a dried dairy food. Sour milk or ayran is boiled and strained through a cloth until a thick curd is left. The curd is salted, shaped by hand into small balls or rolls, and laid out in the sun and wind to dry until it is hard as stone. Qurt keeps for many months without spoiling, so nomads always had it on long journeys and through the winter. It is eaten as a snack, sucked slowly, or soaked and crushed into soups and drinks. Its taste is salty and sour. Today qurt is sold in every market of Kazakhstan, in white, smoked and flavoured varieties.',
     facts: [
       'Qurt is made from strained, salted curd that is dried in the sun.',
       'It keeps for months, which made it ideal food for travellers.',
@@ -607,6 +673,9 @@ const list = [
     part: 2,
     title: 'Qystau',
     native: 'Қыстау',
+    transcription: 'qıstau',
+    topic:
+      'When the snow arrives, the family moves into the [[qystau]], a winter dwelling sheltered from the wind.',
     subtitle: 'The sheltered winter home',
     summary: 'Winter quarters in a protected valley, with houses and pens for the herds.',
     description:
@@ -637,6 +706,9 @@ const list = [
     part: 2,
     title: 'Saba',
     native: 'Саба',
+    transcription: 'saba',
+    topic:
+      'A leather [[saba]] hangs by the door of the yurt, and the housewife churns it to prepare kymyz.',
     subtitle: 'The leather vessel for kymyz',
     summary: 'A large leather vessel in which mare’s milk turns into kymyz.',
     description:
@@ -659,6 +731,9 @@ const list = [
     part: 2,
     title: 'Shanyraq',
     native: 'Шаңырақ',
+    transcription: 'shañıraq',
+    topic:
+      'Looking up inside the yurt, you see the daylight pour through the [[shanyraq]], the crown ring that stands for the family home.',
     subtitle: 'The crown of the yurt',
     summary: 'The wooden ring at the top of the yurt and a symbol of the family.',
     description:
@@ -681,6 +756,9 @@ const list = [
     part: 2,
     title: 'Sheber',
     native: 'Шебер',
+    transcription: 'sheber',
+    topic:
+      'A [[sheber]] spent weeks carving the wooden frame of a yurt, and his work was known across the steppe.',
     subtitle: 'The master craftsman',
     summary: 'A skilled maker of beautiful and useful things.',
     description:
@@ -703,6 +781,9 @@ const list = [
     part: 2,
     title: 'Torsyq',
     native: 'Торсық',
+    transcription: 'torsıq',
+    topic:
+      'On the road, the horseman carries water in a leather [[torsyq]] tied to his saddle.',
     subtitle: 'The leather vessel of the road',
     summary: 'A sewn leather flask made for carrying drinks across the steppe.',
     description:
@@ -725,6 +806,9 @@ const list = [
     part: 2,
     title: 'Usta',
     native: 'Ұста',
+    transcription: 'usta',
+    topic:
+      'The village [[usta]] heats the iron in the forge and hammers it into a horseshoe.',
     subtitle: 'The blacksmith master',
     summary: 'A master of metal who forged tools, horseshoes and weapons.',
     description:
@@ -754,6 +838,9 @@ const list = [
     part: 2,
     title: 'Zerger',
     native: 'Зергер',
+    transcription: 'zerger',
+    topic:
+      'A [[zerger]] works silver into earrings and bracelets for a bride.',
     subtitle: 'The silver jeweller',
     summary: 'A master who makes silver bracelets, rings and ornaments.',
     description:
@@ -776,6 +863,9 @@ const list = [
     part: 2,
     title: 'Zhyr',
     native: 'Жыр',
+    transcription: 'zhır',
+    topic:
+      'A [[zhyr]] is sung by a zhyrau, who tells the history and wisdom of the people to the sound of the kobyz.',
     subtitle: 'The epic song of heroes',
     summary: 'Long poems about heroes and history, sung by the zhyrau.',
     description:
@@ -805,6 +895,9 @@ const list = [
     part: 2,
     title: 'Kobyz',
     native: 'Қобыз',
+    transcription: 'qobız',
+    topic:
+      'The musician draws a bow across the [[kobyz]], and its deep, haunting sound recalls the legends of the steppe.',
     subtitle: 'The ancient bowed instrument',
     summary: 'A horsehair-stringed fiddle with a deep, haunting voice.',
     description:
@@ -833,6 +926,9 @@ const list = [
     part: 2,
     title: 'Saukele',
     native: 'Сәукеле',
+    transcription: 'säukele',
+    topic:
+      'The bride puts on a multi-layered white gown and a tall [[saukele]] with a long veil. When the veil falls behind her head, she has “opened her face” and the wedding ceremony is complete.',
     subtitle: 'The bride’s crowning headdress',
     summary: 'A tall, richly decorated headdress worn by the Kazakh bride.',
     description:
@@ -862,6 +958,9 @@ const list = [
     part: 2,
     title: 'Shapan',
     native: 'Шапан',
+    transcription: 'shapan',
+    topic:
+      'At the wedding, the groom wears the long [[shapan]] (in the textbook, “chopan”) and a beautifully decorated hat.',
     subtitle: 'The robe of respect and welcome',
     summary: 'A long outer robe worn for warmth, festivity and honour.',
     description:
@@ -890,6 +989,9 @@ const list = [
     part: 2,
     title: 'Beshbarmak',
     native: 'Бесбармақ',
+    transcription: 'besbarmaq',
+    topic:
+      'The guest sits at a low table and is served [[beshbarmak]], which means “five fingers”: noodles with onions and meat. An elder says a blessing and gives each part of the meal to a different person.',
     subtitle: 'The dish of five fingers and shared tables',
     summary: 'The celebrated Kazakh meal of boiled meat and broad noodles.',
     description:

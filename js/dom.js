@@ -50,3 +50,11 @@ export const fmtTime = (t) => {
   if (!Number.isFinite(t) || t < 0) return '0:00';
   return `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
 };
+
+/** Turns "text with [[word]] inside" into text nodes and a highlighted <mark class="topic-word"> for the word. */
+export const topicNodes = (text) =>
+  String(text || '').split(/(\[\[[^\]]+\]\])/).filter(Boolean).map((part) => {
+    const m = part.match(/^\[\[([^\]]+)\]\]$/);
+    return m ? h('mark.topic-word', null, m[1]) : part;
+  });
+

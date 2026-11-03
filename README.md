@@ -2,7 +2,7 @@
 
 A page-turning web book of **34 Kazakh words** in two parts:
 
-* **Part 1. Textbook Vocabulary** — Khan Shatyr, Kiiz Ui (yurt), Kyz Zhibek, Aisha Bibi, Karakhan, Airan.
+* **Part 1. Textbook Vocabulary** — Khan Shatyr, Kiiz Ui (yurt), Kyz Zhibek, Aisha Bibi, Karakhan, Ayran.
 * **Part 2. Proposed Vocabulary** — Aitys, Asyk, At Arba, Baige, Baursak, Besik, Dombyra, Zhailau, Kazakh Kuresi, Keruen, Kosh, Kymyz, Kui, Qorzhyn, Qudyq, Qurt, Qystau, Saba, Shanyraq, Sheber, Torsyq, Usta, Zerger, Zhyr, Kobyz, Saukele, Shapan, Beshbarmak.
 
 The book layout (contents pages, part openers, chapters, credits) is generated from `js/data.js`, so chapters can be added or reordered there.
@@ -59,7 +59,7 @@ Not recommended: it cannot rewrite `/object/<slug>`.
 Each chapter's model is listed in `js/data.js` and credited on the Credits pages of the book and under each 3D viewer.
 * **Sketchfab, CC BY 4.0:** Kyz Zhibek (girl's takiya), Asyk, Baige (qamshy), Baursak, Dombyra, Usta (anvil), Zhyr (Umbetai Zhyrau monument), Kobyz, Shapan.
 * **Sketchfab, license not stated on the model page** (confirm with the creators before a public launch): Khan Shatyr, Kiiz Ui, Aisha Bibi, Karakhan, Aitys, Kazakh Kuresi, Kui, Qystau, Besik, Saukele.
-* **Simplified models made for this project** (`models/*.glb`): Airan, At Arba, Zhailau, Keruen, Kosh, Kymyz, Qorzhyn, Qudyq, Qurt, Saba, Shanyraq, Sheber, Zerger, Torsyq, Beshbarmak. Every chapter also has a simplified model as an offline fallback.
+* **Simplified models made for this project** (`models/*.glb`): Ayran, At Arba, Zhailau, Keruen, Kosh, Kymyz, Qorzhyn, Qudyq, Qurt, Saba, Shanyraq, Sheber, Zerger, Torsyq, Beshbarmak. Every chapter also has a simplified model as an offline fallback.
 
 The Sketchfab viewer is loaded with AR/VR buttons switched off. If a Sketchfab model fails (or you press **Use simplified model**) the page shows the local `.glb` in a small built-in WebGL viewer (`js/glbviewer.js`, no external libraries). The credit line under the viewer always names the creator and license.
 
