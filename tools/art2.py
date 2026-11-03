@@ -390,11 +390,11 @@ def build_airan():
         label_layer('Thick, sour\nfermented milk', (282, 420), (20, 230), 16.4),
     ]
     return Scene('airan', [cloth, jug_l, bowl, pour, cool] + labels, [
-        'Airan is a cool, sour drink made from fermented milk.',
-        'A little old airan is stirred into warm boiled milk as a starter.',
+        'Ayran is a cool, sour drink made from fermented milk.',
+        'A little old ayran is stirred into warm boiled milk as a starter.',
         'A few hours later it thickens and becomes pleasantly sour.',
         'Mixed with cold water, it is the favourite drink of hot summer days.',
-    ], 'Айран', 'Airan', 'The cool sour milk of summer')
+    ], 'Айран', 'Ayran', 'The cool sour milk of summer')
 
 
 # ============================================================== PART 2
