@@ -12,6 +12,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const OUT = join(here, '..', 'print', 'book.html');
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const topicHtml = (t) => esc(t).replace(/\[\[([^\]]+)\]\]/g, '<mark>$1</mark>');
 const short = (url) => url.replace(/^https?:\/\//, '');
 const qr = (url, label) => `<div class="qr">${qrSvg(url, { dark: '#2a1c12', title: label })}</div>`;
 
@@ -42,7 +43,7 @@ function cover() {
   return `<section class="page cover">
     <div class="frame">
       <p class="kick">An interactive book</p>
-      <h1>Kazakh<br>Heritage</h1>
+      <h1 class="long">KAZAKH ETHNOGRAPHIC TERMS:<br>AN AI-BASED QR DICTIONARY</h1>
       <p class="native">Қазақ мұрасы</p>
       <div class="hero"><img src="../media/images/hero.svg" alt=""></div>
       <p class="sub">${objects.length} words of the steppe in two parts.<br>Read, scan the QR codes and explore every word in 3D.</p>
@@ -55,7 +56,7 @@ function contents(n) {
   const block = (p) => `
     <div class="toc-part"><span>${esc(p.label)}</span> ${esc(p.title)} <em lang="kk">${esc(p.native)}</em><b>${partPage(p.id)}</b></div>
     <ol class="toc">${chaptersOfPart(p.id).map((o) => `
-      <li><span class="n">${o.n}</span><span class="t">${esc(o.title)}</span><span class="k" lang="kk">${esc(o.native)}</span><span class="dots"></span><span class="pg">${pageOf.get(o.slug)}</span></li>`).join('')}
+      <li><span class="n">${o.n}</span><span class="t">${esc(o.title)}</span><span class="k"><span lang="kk">${esc(o.native)}</span> · <i>${esc(o.transcription)}</i></span><span class="dots"></span><span class="pg">${pageOf.get(o.slug)}</span></li>`).join('')}
     </ol>`;
   return `<section class="page">
     <div class="body">
@@ -81,7 +82,7 @@ function partOpener(n, p) {
       <p class="native" lang="kk">${esc(p.native)}</p>
       <div class="orn">❖</div>
       <p class="intro">${esc(p.intro)}</p>
-      <ul class="chips ${items.length > 12 ? 'dense' : ''}">${items.map((o) => `<li><b>${o.n}</b>${esc(o.title)} <span lang="kk">${esc(o.native)}</span></li>`).join('')}</ul>
+      <ul class="chips ${items.length > 12 ? 'dense' : ''}">${items.map((o) => `<li><b>${o.n}</b><div class="cw">${esc(o.title)}<span><span lang="kk">${esc(o.native)}</span> · <i>${esc(o.transcription)}</i></span></div></li>`).join('')}</ul>
     </div>
     ${footer(n, `${SITE}/#part-${p.id}`, `${p.label} in the interactive book`)}
   </section>`;
@@ -93,12 +94,14 @@ function chapter(n, o) {
   return `<section class="page chapter">
     <div class="body">
       <header class="ch-top"><span>${esc(p.label)} · ${esc(p.title)}</span><span>Chapter ${String(o.n).padStart(2, '0')} of ${objects.length}</span></header>
-      <h2 class="title">${esc(o.title)} <span class="native" lang="kk">${esc(o.native)}</span></h2>
+      <h2 class="title">${esc(o.title)} <span class="native"><span lang="kk">${esc(o.native)}</span> · <i>${esc(o.transcription)}</i></span></h2>
       <p class="subtitle">${esc(o.subtitle)}</p>
       <figure class="pic"><img src="images/${o.slug}.png" alt="Illustration: ${esc(o.title)}"></figure>
       <p class="desc">${esc(o.description)}</p>
       <h3>Good to know</h3>
       <ul class="facts">${o.facts.map((f) => `<li>${esc(f)}</li>`).join('')}</ul>
+      <h3>The word in a sentence</h3>
+      <p class="topic">${topicHtml(o.topic)}</p>
     </div>
     <footer class="foot big">
       ${qr(url, `3D model of ${o.title}`)}

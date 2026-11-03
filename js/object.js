@@ -1,5 +1,5 @@
 import { objects, bySlug, neighbours, partOf } from './data.js';
-import { h, icon } from './dom.js';
+import { h, icon, topicNodes } from './dom.js';
 import { asset } from './config.js';
 import { mount3D } from './model3d.js';
 import { createNarration } from './audio.js';
@@ -40,7 +40,7 @@ function notFound(slug) {
 
 function render(o) {
   const { prev, next } = neighbours(o.slug);
-  document.title = `${o.title} (${o.native}) · Kazakh Heritage`;
+  document.title = `${o.title} (${o.native}, ${o.transcription}) · Kazakh Heritage`;
   const meta = document.querySelector('meta[name="description"]');
   if (meta) meta.setAttribute('content', `${o.title}: ${o.summary} Explore the 3D model and listen to the story.`);
 
@@ -51,7 +51,7 @@ function render(o) {
     header(),
     h('main.obj-main', null,
       h('p.kicker', null, `${partOf(o).label} · Chapter ${o.n} of ${objects.length}`),
-      h('h1.obj-title', null, o.title, h('span.native', { lang: 'kk' }, o.native)),
+      h('h1.obj-title', null, o.title, h('span.native', null, h('span', { lang: 'kk' }, o.native), h('span.transcr', null, ' · ', o.transcription))),
       h('p.lead', null, o.subtitle),
       h('section.obj-section', { 'aria-label': '3D model' }, viewer),
       h('section.obj-section.card', null, narration),
@@ -60,6 +60,8 @@ function render(o) {
         h('p.body', null, o.description),
         h('h3.sec-sub', null, 'Good to know'),
         h('ul.facts', null, o.facts.map((f) => h('li', null, f))),
+        h('h3.sec-sub', null, 'The word in a sentence'),
+        h('p.topic', null, topicNodes(o.topic)),
       ),
       h('nav.obj-nav', { 'aria-label': 'Chapters' },
         prev ? h('a.btn.btn-ghost', { href: objectUrl(prev.slug) }, icon('left', 16), prev.title) : h('span'),

@@ -107,3 +107,13 @@ h3 { margin: 3.5mm 0 1mm; font-size: 8.5pt; letter-spacing: .16em; text-transfor
   body { background: #555; padding: 10mm 0; }
   .page { margin: 0 auto 10mm; box-shadow: 0 2mm 8mm rgba(0, 0, 0, .4); }
 }
+
+/* transcription, topic, long cover title */
+.cover h1.long { font-size: 27pt; line-height: 1.2; letter-spacing: .02em; }
+i { font-style: italic; }
+.topic { margin: 0; font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.45; }
+.topic mark { background: rgba(212, 168, 74, .38); color: inherit; font-style: normal; font-weight: 700; padding: 0 .6mm; border-radius: .6mm; }
+.chips span i, .toc .k i { font-style: italic; }
+.chips li { align-items: center; }
+.chips .cw { line-height: 1.25; }
+.chips .cw > span { display: block; margin-top: .3mm; }
