@@ -960,7 +960,7 @@ const list = [
     native: 'Шапан',
     transcription: 'shapan',
     topic:
-      'At the wedding, the groom wears the long [[shapan]] (in the textbook, “chopan”) and a beautifully decorated hat.',
+      'At the wedding, the groom wears the long [[shapan]] and a beautifully decorated hat.',
     subtitle: 'The robe of respect and welcome',
     summary: 'A long outer robe worn for warmth, festivity and honour.',
     description:
