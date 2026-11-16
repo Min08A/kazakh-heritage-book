@@ -31,6 +31,7 @@ const list = [
     title: 'Khan Shatyr',
     native: 'Хан Шатыр',
     transcription: 'han shatır',
+    unit: { num: 'Unit 1', name: 'Our world' },
     topic:
       'On a freezing winter day, families in Astana stroll through [[Khan Shatyr]] in light clothes, because the transparent tent keeps the air inside warm.',
     subtitle: 'The royal tent of Astana',
@@ -63,6 +64,7 @@ const list = [
     title: 'Kiiz Ui',
     native: 'Киіз үй',
     transcription: 'kiíz üy',
+    unit: { num: 'Unit 5', name: 'Reading for pleasure' },
     topic:
       'As a guest, you enter the [[kiiz ui]] and sit at a round low table. Colourful hand-crafted rugs and blankets cover the floor and walls, and the felt protects the family from the weather.',
     subtitle: 'The portable home of the nomads',
@@ -95,6 +97,7 @@ const list = [
     title: 'Kyz Zhibek',
     native: 'Қыз Жібек',
     transcription: 'qız zhíbek',
+    unit: { num: 'Unit 5', name: 'Reading for pleasure' },
     topic:
       'At a festival, an akyn sings the story of [[Kyz Zhibek]] to the dombra, and the audience listens to the tale of love and loyalty.',
     subtitle: 'The silk maiden of the great love epic',
@@ -127,6 +130,7 @@ const list = [
     title: 'Aisha Bibi',
     native: 'Айша бибі',
     transcription: 'aysha bíbí',
+    unit: { num: 'Unit 5', name: 'Reading for pleasure' },
     topic:
       'Young couples visiting Taraz stop at [[Aisha Bibi]] to admire the carved tiles and hear the legend of faithful love.',
     subtitle: 'A monument to faithful love',
@@ -159,6 +163,7 @@ const list = [
     title: 'Karakhan',
     native: 'Қарахан',
     transcription: 'qarahan',
+    unit: { num: 'Unit 5', name: 'Reading for pleasure' },
     topic:
       'In Taraz, guides tell how the ruler [[Karakhan]] built a mausoleum in memory of his beloved Aisha.',
     subtitle: 'The mausoleum of the holy ruler of Taraz',
@@ -191,6 +196,7 @@ const list = [
     title: 'Ayran',
     native: 'Айран',
     transcription: 'ayran',
+    unit: { num: 'Unit 8', name: 'Food and drink' },
     topic:
       'On a hot summer day, a guest in the yurt is offered a bowl of cold [[ayran]] mixed with water.',
     subtitle: 'The cool sour milk of summer',

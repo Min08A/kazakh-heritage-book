@@ -232,6 +232,7 @@ export function createBook(root) {
     return pageShell(idx, 'page-video',
       h('header.ch-head', null,
         h('p.kicker', null, `${partOf(o).label} · Chapter ${o.n} of ${objects.length}`),
+        o.unit ? h('p.unit', null, h('strong', null, o.unit.num), h('br'), o.unit.name) : null,
         h('h2.page-title', null, o.title, h('span.native', null, h('span', { lang: 'kk' }, o.native), h('span.transcr', null, ' · ', o.transcription))),
       ),
       player.el,
