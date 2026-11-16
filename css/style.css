@@ -392,3 +392,8 @@ img { max-width: 100%; }
 .mode-spread .page-text .facts li { margin: .2rem 0; }
 .mode-spread .page-text .facts-title { margin-top: .35rem; }
 .mode-spread .page-text .topic { font-size: .88rem; line-height: 1.45; }
+
+/* textbook unit label above the word */
+.unit { margin: 0 0 .3rem; font-size: .9rem; line-height: 1.35; color: var(--ink-soft, inherit); opacity: .85; }
+.unit strong { font-weight: 700; letter-spacing: .02em; }
+.kicker + .unit { margin-top: .45rem; }
