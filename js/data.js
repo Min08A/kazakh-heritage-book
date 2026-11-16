@@ -224,6 +224,7 @@ const list = [
     title: 'Aitys',
     native: 'Айтыс',
     transcription: 'aytıs',
+    unit: { num: 'Unit 3', name: 'Entertainment and the media' },
     topic:
       'At a holiday, two akyns face each other and answer each other’s verses with quick wit in an [[aitys]] while the crowd cheers.',
     subtitle: 'A duel of poets',
@@ -257,6 +258,7 @@ const list = [
     title: 'Asyk',
     native: 'Асық',
     transcription: 'asıq',
+    unit: { num: 'Unit 4', name: 'Sport and health' },
     topic:
       'Children sit in a circle on the ground and throw the [[asyk]] bones, and every throw decides who wins the game.',
     subtitle: 'The knucklebone game',
@@ -288,6 +290,7 @@ const list = [
     title: 'At Arba',
     native: 'Ат арба',
     transcription: 'at arba',
+    unit: { num: 'Unit 7', name: 'Travel and transport' },
     topic:
       'Before cars and roads, a family loaded its belongings onto an [[at arba]], a cart pulled by a horse.',
     subtitle: 'The horse-drawn cart',
@@ -313,6 +316,7 @@ const list = [
     title: 'Baige',
     native: 'Бәйге',
     transcription: 'bäyge',
+    unit: { num: 'Unit 4', name: 'Sport and health' },
     topic:
       'At a wedding or a holiday, men ride out on their horses for the [[baige]], and the fastest, best-trained horse brings honour to its owner.',
     subtitle: 'The long-distance horse race',
@@ -345,6 +349,7 @@ const list = [
     title: 'Baursak',
     native: 'Бауырсақ',
     transcription: 'bauırsaq',
+    unit: { num: 'Unit 8', name: 'Food and drink' },
     topic:
       'The meal is accompanied by [[baursak]], small round pieces of fried dough, served hot with tea.',
     subtitle: 'Golden bread of the dastarkhan',
@@ -376,6 +381,7 @@ const list = [
     title: 'Besik',
     native: 'Бесік',
     transcription: 'besík',
+    unit: { num: 'Unit 1', name: 'Our world' },
     topic:
       'A newborn baby sleeps in a wooden [[besik]], and relatives gather for a small celebration when the baby is first laid in it.',
     subtitle: 'The cradle that welcomes a child',
@@ -409,6 +415,7 @@ const list = [
     title: 'Dombyra',
     native: 'Домбыра',
     transcription: 'dombıra',
+    unit: { num: 'Unit 1', name: 'Our world' },
     topic:
       'At the end of the meal you may sit and have tea while the musicians tune up the [[dombra]], a two-stringed instrument, and sing songs about love and war.',
     subtitle: 'The two-string voice of the steppe',
@@ -440,6 +447,7 @@ const list = [
     title: 'Zhailau',
     native: 'Жайлау',
     transcription: 'zhaylau',
+    unit: { num: 'Unit 6', name: 'The Natural World' },
     topic:
       'In summer the herders move their yurts to the [[zhailau]], the cool mountain pasture, where the animals feed on fresh grass.',
     subtitle: 'The green summer pasture',
@@ -465,6 +473,7 @@ const list = [
     title: 'Kazakh Kuresi',
     native: 'Қазақ күресі',
     transcription: 'qazaq küresí',
+    unit: { num: 'Unit 4', name: 'Sport and health' },
     topic:
       'At a holiday, wrestlers meet in [[Kazakh kuresi]] inside a ring of spectators and try to throw each other to the ground.',
     subtitle: 'The wrestling of the steppe',
@@ -498,6 +507,7 @@ const list = [
     title: 'Keruen',
     native: 'Керуен',
     transcription: 'keruen',
+    unit: { num: 'Unit 7', name: 'Travel and transport' },
     topic:
       'A long [[keruen]] of camels crossed the steppe, carrying goods between distant towns.',
     subtitle: 'The camel caravan of the Silk Road',
@@ -523,6 +533,7 @@ const list = [
     title: 'Kosh',
     native: 'Көш',
     transcription: 'kösh',
+    unit: { num: 'Unit 7', name: 'Travel and transport' },
     topic:
       'When autumn came, the whole village joined the [[kosh]], loading the yurts and moving to the winter pastures.',
     subtitle: 'The great seasonal move',
@@ -548,6 +559,7 @@ const list = [
     title: 'Kymyz',
     native: 'Қымыз',
     transcription: 'qımız',
+    unit: { num: 'Unit 8', name: 'Food and drink' },
     topic:
       'Guests in the yurt are offered a bowl of [[kymyz]], the sour mare’s milk drink, as a sign of hospitality.',
     subtitle: 'The fermented mare’s milk',
@@ -573,6 +585,7 @@ const list = [
     title: 'Kui',
     native: 'Күй',
     transcription: 'küy',
+    unit: { num: 'Unit 3', name: 'Entertainment and the media' },
     topic:
       'Around the fire the musician plays a [[kui]] on the dombra, a melody that tells a story without any words.',
     subtitle: 'A story told without words',
@@ -605,6 +618,7 @@ const list = [
     title: 'Qorzhyn',
     native: 'Қоржын',
     transcription: 'qorzhın',
+    unit: { num: 'Unit 2', name: 'Daily life and shopping' },
     topic:
       'Before the journey, the rider hangs a pair of [[qorzhyn]] over the saddle, packed with bread and clothes.',
     subtitle: 'The double saddlebag',
@@ -630,6 +644,7 @@ const list = [
     title: 'Qudyq',
     native: 'Құдық',
     transcription: 'quduq',
+    unit: { num: 'Unit 6', name: 'The Natural World' },
     topic:
       'After days of travel, the caravan stops at a [[qudyq]], a well, to give water to the animals.',
     subtitle: 'The well that gives life',
@@ -655,6 +670,7 @@ const list = [
     title: 'Qurt',
     native: 'Құрт',
     transcription: 'qurt',
+    unit: { num: 'Unit 8', name: 'Food and drink' },
     topic:
       'Before a long journey, the nomads put [[qurt]], dried salty cheese balls, into their bags.',
     subtitle: 'The dried cheese of the road',
@@ -680,6 +696,7 @@ const list = [
     title: 'Qystau',
     native: 'Қыстау',
     transcription: 'qıstau',
+    unit: { num: 'Unit 6', name: 'The Natural World' },
     topic:
       'When the snow arrives, the family moves into the [[qystau]], a winter dwelling sheltered from the wind.',
     subtitle: 'The sheltered winter home',
@@ -713,6 +730,7 @@ const list = [
     title: 'Saba',
     native: 'Саба',
     transcription: 'saba',
+    unit: { num: 'Unit 2', name: 'Daily life and shopping' },
     topic:
       'A leather [[saba]] hangs by the door of the yurt, and the housewife churns it to prepare kymyz.',
     subtitle: 'The leather vessel for kymyz',
@@ -738,6 +756,7 @@ const list = [
     title: 'Shanyraq',
     native: 'Шаңырақ',
     transcription: 'shañıraq',
+    unit: { num: 'Unit 1', name: 'Our world' },
     topic:
       'Looking up inside the yurt, you see the daylight pour through the [[shanyraq]], the crown ring that stands for the family home.',
     subtitle: 'The crown of the yurt',
@@ -763,6 +782,7 @@ const list = [
     title: 'Sheber',
     native: 'Шебер',
     transcription: 'sheber',
+    unit: { num: 'Unit 9', name: 'The world of work' },
     topic:
       'A [[sheber]] spent weeks carving the wooden frame of a yurt, and his work was known across the steppe.',
     subtitle: 'The master craftsman',
@@ -788,6 +808,7 @@ const list = [
     title: 'Torsyq',
     native: 'Торсық',
     transcription: 'torsıq',
+    unit: { num: 'Unit 2', name: 'Daily life and shopping' },
     topic:
       'On the road, the horseman carries water in a leather [[torsyq]] tied to his saddle.',
     subtitle: 'The leather vessel of the road',
@@ -813,6 +834,7 @@ const list = [
     title: 'Usta',
     native: 'Ұста',
     transcription: 'usta',
+    unit: { num: 'Unit 9', name: 'The world of work' },
     topic:
       'The village [[usta]] heats the iron in the forge and hammers it into a horseshoe.',
     subtitle: 'The blacksmith master',
@@ -845,6 +867,7 @@ const list = [
     title: 'Zerger',
     native: 'Зергер',
     transcription: 'zerger',
+    unit: { num: 'Unit 9', name: 'The world of work' },
     topic:
       'A [[zerger]] works silver into earrings and bracelets for a bride.',
     subtitle: 'The silver jeweller',
@@ -870,6 +893,7 @@ const list = [
     title: 'Zhyr',
     native: 'Жыр',
     transcription: 'zhır',
+    unit: { num: 'Unit 3', name: 'Entertainment and the media' },
     topic:
       'A [[zhyr]] is sung by a zhyrau, who tells the history and wisdom of the people to the sound of the kobyz.',
     subtitle: 'The epic song of heroes',
