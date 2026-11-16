@@ -117,3 +117,7 @@ i { font-style: italic; }
 .chips li { align-items: center; }
 .chips .cw { line-height: 1.25; }
 .chips .cw > span { display: block; margin-top: .3mm; }
+
+/* textbook unit label */
+.unit { margin: 0 0 1.5mm; font-size: 9.5pt; line-height: 1.3; color: var(--ink-soft); }
+.unit b { font-weight: 700; }

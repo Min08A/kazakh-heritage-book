@@ -94,6 +94,7 @@ function chapter(n, o) {
   return `<section class="page chapter">
     <div class="body">
       <header class="ch-top"><span>${esc(p.label)} · ${esc(p.title)}</span><span>Chapter ${String(o.n).padStart(2, '0')} of ${objects.length}</span></header>
+      ${o.unit ? `<p class="unit"><b>${esc(o.unit.num)}</b><br>${esc(o.unit.name)}</p>` : ''}
       <h2 class="title">${esc(o.title)} <span class="native"><span lang="kk">${esc(o.native)}</span> · <i>${esc(o.transcription)}</i></span></h2>
       <p class="subtitle">${esc(o.subtitle)}</p>
       <figure class="pic"><img src="images/${o.slug}.png" alt="Illustration: ${esc(o.title)}"></figure>
